@@ -1,10 +1,37 @@
-import { Directive } from '@angular/core';
+import {
+  Directive,
+  ViewContainerRef,
+  TemplateRef,
+  Input,
+  OnInit,
+} from '@angular/core';
 
 @Directive({
-  selector: '[alexIf]'
+  selector: '[alexIf]',
 })
-export class AlexIfDirective {
+export class AlexIfDirective implements OnInit {
+  private _alexIf!: boolean;
 
-  constructor() { }
+  @Input()
+  set alexIf(condition: boolean) {
+    this._alexIf = condition;
+    this._updateView();
+  }
 
+  constructor(
+    private _viewContainer: ViewContainerRef,
+    private _templateRef: TemplateRef<any>
+  ) {}
+
+  ngOnInit(): void {
+    console.log('testing123');
+  }
+
+  _updateView() {
+    if (this._alexIf) {
+      this._viewContainer.createEmbeddedView(this._templateRef);
+    } else {
+      this._viewContainer.clear();
+    }
+  }
 }
