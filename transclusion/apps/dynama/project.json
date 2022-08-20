@@ -1,7 +1,7 @@
 {
   "projectType": "application",
   "sourceRoot": "apps/dynama/src",
-  "prefix": "transclusion",
+  "prefix": "alex",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
