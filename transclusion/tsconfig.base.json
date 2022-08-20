@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@transclusion/calendar": ["libs/calendar/src/index.ts"],
       "@transclusion/shared": ["libs/shared/src/index.ts"]
     }
   },
