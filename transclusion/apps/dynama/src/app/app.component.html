@@ -1,5 +1,7 @@
 <main>
   <calendar-base>
-    <calendar-day *ngFor="let day of days">{{ day }}</calendar-day>
+    <calendar-day *ngFor="let number of dayNumbers">
+      <day-number-box>{{ number }}</day-number-box>
+    </calendar-day>
   </calendar-base>
 </main>
