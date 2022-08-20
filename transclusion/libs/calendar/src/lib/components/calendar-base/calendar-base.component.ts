@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calendar-base.component.scss'],
 })
 export class CalendarBaseComponent implements OnInit {
-  constructor() {}
+  show = true;
 
-  ngOnInit(): void {}
+  constructor() {
+    return;
+  }
+
+  ngOnInit(): void {
+    return;
+  }
 }
