@@ -14,7 +14,7 @@
         "tsConfig": "apps/dynama/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/dynama/src/favicon.ico", "apps/dynama/src/assets"],
-        "styles": ["apps/dynama/src/styles.scss"],
+        "styles": ["apps/dynama/src/scss/styles.scss"],
         "scripts": []
       },
       "configurations": {

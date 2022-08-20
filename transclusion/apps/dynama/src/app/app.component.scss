@@ -1,0 +1,8 @@
+@use './../scss/vars' as *;
+
+:host {
+  main {
+    background: $gray_1;
+    height: 100%;
+  }
+}
