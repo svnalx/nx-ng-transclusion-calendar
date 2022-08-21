@@ -18,4 +18,12 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     return;
   }
+
+  doSomething(): void {
+    console.log('did something');
+  }
+
+  toggle1(): void {
+    console.log('toggle 1');
+  }
 }

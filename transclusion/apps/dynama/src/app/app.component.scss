@@ -1,9 +1,41 @@
 @use 'vars' as *;
 
 :host {
+  nav {
+    height: 5vh;
+    background: $blue_2;
+    padding: 0;
+    margin: 0;
+    ul {
+      height: 5vh;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      li {
+        padding: 8px;
+        margin: 0;
+        list-style-type: none;
+        button {
+          border: 0;
+          background: $blue_1;
+          color: $blue_2;
+          padding: 8px;
+          margin-right: 8px;
+          font: normal normal 600 11px/11px 'Open Sans', sans-serif;
+          letter-spacing: -0.5px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
   main {
     background: $black;
-    height: 100vh;
+    height: 95vh;
     width: 100vw;
     margin: 0;
     display: flex;
