@@ -24,7 +24,12 @@ export class AlexIfDirective implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log('testing123', this._viewContainer, this._templateRef);
+    // console.log(
+    //   'viewContainer + templateRef',
+    //   this._viewContainer,
+    //   this._templateRef
+    // );
+    return;
   }
 
   _updateView() {

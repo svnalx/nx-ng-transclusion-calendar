@@ -6,6 +6,7 @@ import { CalendarDayComponent } from './components/calendar-day/calendar-day.com
 import { DayNumberBoxComponent } from './components/day-number-box/day-number-box.component';
 import { DayAgendaBoxComponent } from './components/day-agenda-box/day-agenda-box.component';
 import { DayAgendaItemComponent } from './components/day-agenda-item/day-agenda-item.component';
+import { DayNameBoxComponent } from './components/day-name-box/day-name-box.component';
 
 @NgModule({
   imports: [CommonModule, SharedModule],
@@ -15,6 +16,7 @@ import { DayAgendaItemComponent } from './components/day-agenda-item/day-agenda-
     DayNumberBoxComponent,
     DayAgendaBoxComponent,
     DayAgendaItemComponent,
+    DayNameBoxComponent,
   ],
   exports: [
     CalendarBaseComponent,
@@ -22,6 +24,7 @@ import { DayAgendaItemComponent } from './components/day-agenda-item/day-agenda-
     DayNumberBoxComponent,
     DayAgendaBoxComponent,
     DayAgendaItemComponent,
+    DayNameBoxComponent,
   ],
 })
 export class CalendarModule {}

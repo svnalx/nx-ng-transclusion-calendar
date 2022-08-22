@@ -1,13 +1,14 @@
 <nav>
   <ul>
     <li>
-      <button (click)="toggle1()">Toggle 1</button>
+      <button (click)="toggle()">Toggle Me</button>
     </li>
   </ul>
 </nav>
 <main>
   <calendar-base>
     <calendar-day *ngFor="let number of dayNumbers">
+      <day-name-box [dayNames]="dayNames" [dayNumber]="number"></day-name-box>
       <day-number-box>{{ number }}</day-number-box>
       <day-agenda-box
         [calendarEventsByDay]="calendarEventsByDay"

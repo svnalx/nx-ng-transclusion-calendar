@@ -29,8 +29,9 @@ export class DayAgendaBoxComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.template1.elementRef.nativeElement);
-    console.log(this.calendarEventsByDay);
+    //console.log(this.template1.elementRef.nativeElement);
+    //console.log(this.calendarEventsByDay);
+    return;
   }
 
   get template() {

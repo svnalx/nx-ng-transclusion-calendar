@@ -11,5 +11,9 @@
     border: 1px solid $green_2;
     color: $black;
     font: normal normal 14px/14px 'Open Sans', sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 }

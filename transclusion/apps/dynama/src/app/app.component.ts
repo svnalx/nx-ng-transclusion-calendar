@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DayService, CalendarEventsByDay } from '@transclusion/shared';
 @Component({
   selector: 'transclusion-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   dayNames: string[];
   dayNumbers: number[];
   calendarEventsByDay: CalendarEventsByDay;
@@ -16,11 +16,7 @@ export class AppComponent implements OnInit {
     this.calendarEventsByDay = this.dayService.calendarEventsByDay();
   }
 
-  ngOnInit(): void {
-    return;
-  }
-
-  toggle1(): void {
-    console.log('toggle 1');
+  toggle(): void {
+    //console.log('toggle me');
   }
 }
