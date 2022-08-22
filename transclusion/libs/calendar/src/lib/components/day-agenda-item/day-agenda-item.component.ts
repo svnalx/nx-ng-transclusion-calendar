@@ -1,5 +1,5 @@
 import { Component, Input, TemplateRef, AfterViewInit } from '@angular/core';
-import { CalendarEvent } from '@transclusion/calendar';
+import { CalendarEvent } from '@transclusion/shared';
 
 @Component({
   selector: 'day-agenda-item',
@@ -10,7 +10,7 @@ export class DayAgendaItemComponent implements AfterViewInit {
   @Input()
   templateName!: TemplateRef<HTMLElement>;
   @Input()
-  calendarEvent: CalendarEvent = {
+  calendarEvent: CalendarEvent | null = {
     eventName: null,
     timeDue: null,
   };

@@ -5,11 +5,8 @@ import {
   TemplateRef,
   ViewChild,
 } from '@angular/core';
+import { CalendarEventsByDay } from '@transclusion/shared';
 
-export interface CalendarEvent {
-  eventName: string | null;
-  timeDue: string | null;
-}
 @Component({
   selector: 'day-agenda-box',
   templateUrl: './day-agenda-box.component.html',
@@ -21,15 +18,23 @@ export class DayAgendaBoxComponent implements AfterViewInit {
   @ViewChild('template2')
   template2!: TemplateRef<HTMLElement>;
   @Input()
-  calendarEvents: CalendarEvent[] = [];
+  calendarEventsByDay: CalendarEventsByDay = {
+    [0]: null,
+  };
+  @Input()
+  dayNumber: number;
+
+  constructor() {
+    this.dayNumber = 0;
+  }
 
   ngAfterViewInit() {
     console.log(this.template1.elementRef.nativeElement);
-    console.log(this.calendarEvents);
+    console.log(this.calendarEventsByDay);
   }
 
   get template() {
-    if (!this.calendarEvents) return this.template1;
+    if (!this.calendarEventsByDay) return this.template1;
     return this.template2;
   }
 }

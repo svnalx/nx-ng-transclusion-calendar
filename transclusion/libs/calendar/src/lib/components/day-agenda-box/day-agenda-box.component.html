@@ -11,7 +11,7 @@
   </ng-template>
 
   <day-agenda-item
-    *ngFor="let ce of calendarEvents"
+    *ngFor="let ce of calendarEventsByDay[dayNumber]"
     [templateName]="template"
     [calendarEvent]="ce"
   ></day-agenda-item>

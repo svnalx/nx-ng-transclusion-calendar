@@ -9,7 +9,10 @@
   <calendar-base>
     <calendar-day *ngFor="let number of dayNumbers">
       <day-number-box>{{ number }}</day-number-box>
-      <day-agenda-box [calendarEvents]="calendarEvents"></day-agenda-box>
+      <day-agenda-box
+        [calendarEventsByDay]="calendarEventsByDay"
+        [dayNumber]="number"
+      ></day-agenda-box>
     </calendar-day>
   </calendar-base>
 </main>

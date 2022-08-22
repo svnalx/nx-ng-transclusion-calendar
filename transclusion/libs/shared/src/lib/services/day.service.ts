@@ -1,5 +1,13 @@
 import { Injectable } from '@angular/core';
-import { CalendarEvent } from '@transclusion/calendar';
+
+export interface CalendarEvent {
+  eventName: string | null;
+  timeDue: string | null;
+}
+
+export interface CalendarEventsByDay {
+  [day: number]: CalendarEvent[] | null;
+}
 
 @Injectable({
   providedIn: 'root',
@@ -27,10 +35,30 @@ export class DayService {
     return dayNumbers;
   }
 
-  calendarEvents(): CalendarEvent[] {
-    return [
-      { eventName: 'start work', timeDue: '9:00 am' },
-      { eventName: 'end work', timeDue: '5:00 pm' },
-    ];
+  calendarEventsByDay(): CalendarEventsByDay {
+    return {
+      1: [
+        { eventName: 'start work', timeDue: '9:00 am' },
+        { eventName: 'end work', timeDue: '5:00 pm' },
+      ],
+      2: [
+        { eventName: 'start work', timeDue: '9:00 am' },
+        { eventName: 'end work', timeDue: '5:00 pm' },
+      ],
+      3: [
+        { eventName: 'start work', timeDue: '9:00 am' },
+        { eventName: 'end work', timeDue: '5:00 pm' },
+      ],
+      4: [
+        { eventName: 'start work', timeDue: '9:00 am' },
+        { eventName: 'end work', timeDue: '5:00 pm' },
+      ],
+      5: [
+        { eventName: 'start work', timeDue: '9:00 am' },
+        { eventName: 'end work', timeDue: '5:00 pm' },
+      ],
+      6: [{ eventName: 'mow yard', timeDue: '10:00 am' }],
+      7: [{ eventName: 'grocery', timeDue: '3:00 pm' }],
+    };
   }
 }

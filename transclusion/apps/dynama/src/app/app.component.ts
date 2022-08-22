@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CalendarEvent } from '@transclusion/calendar';
-import { DayService } from '@transclusion/shared';
+import { DayService, CalendarEventsByDay } from '@transclusion/shared';
 @Component({
   selector: 'transclusion-root',
   templateUrl: './app.component.html',
@@ -9,12 +8,12 @@ import { DayService } from '@transclusion/shared';
 export class AppComponent implements OnInit {
   dayNames: string[];
   dayNumbers: number[];
-  calendarEvents: CalendarEvent[];
+  calendarEventsByDay: CalendarEventsByDay;
 
   constructor(private dayService: DayService) {
     this.dayNames = this.dayService.dayNames();
     this.dayNumbers = this.dayService.dayNumbers();
-    this.calendarEvents = this.dayService.calendarEvents();
+    this.calendarEventsByDay = this.dayService.calendarEventsByDay();
   }
 
   ngOnInit(): void {
