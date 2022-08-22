@@ -1,6 +1,7 @@
 <div class="day-agenda-box">
-  <ng-container *ngTemplateOutlet="template1; context: { parentVar: 1235 }">
-  </ng-container>
+  <!-- <ng-container *ngTemplateOutlet="template1; context: { parentVar: 1235 }">
+  </ng-container> -->
+  <day-agenda-item [customTemplate]="template1"></day-agenda-item>
 </div>
 
 <ng-template let-localVar="parentVar" #template1>

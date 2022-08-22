@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'day-agenda-item',
@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./day-agenda-item.component.scss'],
 })
 export class DayAgendaItemComponent implements OnInit {
-  constructor() {}
+  @Input()
+  customTemplate!: TemplateRef<HTMLElement>;
 
-  ngOnInit(): void {}
+  constructor() {
+    return;
+  }
+
+  ngOnInit(): void {
+    return;
+  }
 }
