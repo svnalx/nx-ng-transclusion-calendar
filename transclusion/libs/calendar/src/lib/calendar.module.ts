@@ -4,6 +4,7 @@ import { CalendarBaseComponent } from './components/calendar-base/calendar-base.
 import { SharedModule } from '@transclusion/shared';
 import { CalendarDayComponent } from './components/calendar-day/calendar-day.component';
 import { DayNumberBoxComponent } from './components/day-number-box/day-number-box.component';
+import { DayAgendaBoxComponent } from './components/day-agenda-box/day-agenda-box.component';
 
 @NgModule({
   imports: [CommonModule, SharedModule],
@@ -11,7 +12,13 @@ import { DayNumberBoxComponent } from './components/day-number-box/day-number-bo
     CalendarBaseComponent,
     CalendarDayComponent,
     DayNumberBoxComponent,
+    DayAgendaBoxComponent,
   ],
-  exports: [CalendarBaseComponent, CalendarDayComponent, DayNumberBoxComponent],
+  exports: [
+    CalendarBaseComponent,
+    CalendarDayComponent,
+    DayNumberBoxComponent,
+    DayAgendaBoxComponent,
+  ],
 })
 export class CalendarModule {}
