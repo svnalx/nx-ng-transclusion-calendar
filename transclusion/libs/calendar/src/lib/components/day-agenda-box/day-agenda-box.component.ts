@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./day-agenda-box.component.scss'],
 })
 export class DayAgendaBoxComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    return;
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    return;
+  }
 }

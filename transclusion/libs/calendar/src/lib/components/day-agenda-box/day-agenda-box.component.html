@@ -1,1 +1,12 @@
-<p>day-agenda-box works!</p>
+<div class="day-agenda-box">
+  <ng-container *ngTemplateOutlet="template1; context: { parentVar: 1235 }">
+  </ng-container>
+</div>
+
+<ng-template let-localVar="parentVar" #template1>
+  <p>No agenda to display. {{ localVar }}</p>
+</ng-template>
+
+<ng-template let-value="data-2" #template2>
+  <p>Template 2</p>
+</ng-template>
