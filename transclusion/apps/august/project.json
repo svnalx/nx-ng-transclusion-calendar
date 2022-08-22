@@ -1,22 +1,22 @@
 {
   "projectType": "application",
-  "sourceRoot": "apps/dynama/src",
+  "sourceRoot": "apps/august/src",
   "prefix": "alex",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/dynama",
-        "index": "apps/dynama/src/index.html",
-        "main": "apps/dynama/src/main.ts",
-        "polyfills": "apps/dynama/src/polyfills.ts",
-        "tsConfig": "apps/dynama/tsconfig.app.json",
+        "outputPath": "dist/apps/august",
+        "index": "apps/august/src/index.html",
+        "main": "apps/august/src/main.ts",
+        "polyfills": "apps/august/src/polyfills.ts",
+        "tsConfig": "apps/august/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/dynama/src/favicon.ico", "apps/dynama/src/assets"],
-        "styles": ["apps/dynama/src/scss/styles.scss"],
+        "assets": ["apps/august/src/favicon.ico", "apps/august/src/assets"],
+        "styles": ["apps/august/src/scss/styles.scss"],
         "stylePreprocessorOptions": {
-          "includePaths": ["apps/dynama/src/scss"]
+          "includePaths": ["apps/august/src/scss"]
         },
         "scripts": []
       },
@@ -36,8 +36,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/dynama/src/environments/environment.ts",
-              "with": "apps/dynama/src/environments/environment.prod.ts"
+              "replace": "apps/august/src/environments/environment.ts",
+              "with": "apps/august/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -57,10 +57,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "dynama:build:production"
+          "browserTarget": "august:build:production"
         },
         "development": {
-          "browserTarget": "dynama:build:development"
+          "browserTarget": "august:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -68,20 +68,20 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "dynama:build"
+        "browserTarget": "august:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/dynama/**/*.ts", "apps/dynama/**/*.html"]
+        "lintFilePatterns": ["apps/august/**/*.ts", "apps/august/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/dynama"],
+      "outputs": ["coverage/apps/august"],
       "options": {
-        "jestConfig": "apps/dynama/jest.config.ts",
+        "jestConfig": "apps/august/jest.config.ts",
         "passWithNoTests": true
       }
     }

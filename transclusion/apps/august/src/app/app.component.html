@@ -6,6 +6,7 @@
   </ul>
 </nav>
 <main>
+  <month-name-box>{{ currentMonth }}</month-name-box>
   <calendar-base>
     <calendar-day *ngFor="let number of dayNumbers">
       <day-name-box [dayNames]="dayNames" [dayNumber]="number"></day-name-box>

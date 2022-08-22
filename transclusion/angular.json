@@ -2,9 +2,9 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "august": "apps/august",
+    "august-e2e": "apps/august-e2e",
     "calendar": "libs/calendar",
-    "dynama": "apps/dynama",
-    "dynama-e2e": "apps/dynama-e2e",
     "shared": "libs/shared"
   }
 }

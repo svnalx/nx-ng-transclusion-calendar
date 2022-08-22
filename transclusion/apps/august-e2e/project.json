@@ -1,18 +1,18 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/dynama-e2e/src",
+  "sourceRoot": "apps/august-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/dynama-e2e/cypress.config.ts",
-        "devServerTarget": "dynama:serve:development",
+        "cypressConfig": "apps/august-e2e/cypress.config.ts",
+        "devServerTarget": "august:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "dynama:serve:production"
+          "devServerTarget": "august:serve:production"
         }
       }
     },
@@ -20,10 +20,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/dynama-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/august-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["dynama"]
+  "implicitDependencies": ["august"]
 }

@@ -1,6 +1,8 @@
 <div class="day-agenda-box">
   <ng-template #template1>
-    <p>No agenda to display.</p>
+    <div class="event-row">
+      <p>No agenda to display.</p>
+    </div>
   </ng-template>
 
   <ng-template let-calendarEvent #template2>
@@ -10,9 +12,11 @@
     </div>
   </ng-template>
 
-  <day-agenda-item
-    *ngFor="let ce of calendarEventsByDay[dayNumber]"
-    [templateName]="template"
-    [calendarEvent]="ce"
-  ></day-agenda-item>
+  <ng-container *ngIf="todaysEvents">
+    <day-agenda-item
+      *ngFor="let ce of todaysEvents"
+      [templateName]="template"
+      [calendarEvent]="ce"
+    ></day-agenda-item>
+  </ng-container>
 </div>

@@ -68,7 +68,7 @@ export class DayService {
         { eventName: 'end work', timeDue: '5:00 pm' },
       ],
       13: [{ eventName: 'mow yard', timeDue: '10:00 am' }],
-      14: [{ eventName: 'grocery', timeDue: '3:00 pm' }],
+      14: [],
       15: [
         { eventName: 'start work', timeDue: '9:00 am' },
         { eventName: 'end work', timeDue: '5:00 pm' },

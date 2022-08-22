@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calendar-day.component.scss'],
 })
 export class CalendarDayComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    return;
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    return;
+  }
 }

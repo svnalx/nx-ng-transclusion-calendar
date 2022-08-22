@@ -112,5 +112,15 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    month-name-box {
+      position: absolute;
+      top: 24px;
+      left: calc(50% - 200px);
+      width: 400px;
+      margin: 0;
+      text-align: center;
+      color: $green_3;
+      font: normal normal 700 32px/32px 'Roboto', sans-serif;
+    }
   }
 }

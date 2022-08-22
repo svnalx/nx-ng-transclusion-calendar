@@ -1,0 +1,22 @@
+@use 'vars' as *;
+
+:host {
+  .month-name-box {
+    font: normal normal 600 24px/32px 'Roboto', sans-serif;
+    .prev {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .current-month {
+      padding: 0 24px;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    .next {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
