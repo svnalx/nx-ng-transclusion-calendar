@@ -2,5 +2,17 @@
 
 :host {
   .day-agenda-item {
+    .event-row {
+      p {
+      }
+    }
+  }
+  &.no-agenda {
+    .day-agenda-item {
+      .event-row {
+        p {
+        }
+      }
+    }
   }
 }

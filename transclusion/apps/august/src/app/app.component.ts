@@ -1,4 +1,4 @@
-import { Component, ɵsetAllowDuplicateNgModuleIdsForTest } from '@angular/core';
+import { Component } from '@angular/core';
 import { DayService, CalendarEventsByDay } from '@transclusion/shared';
 @Component({
   selector: 'transclusion-root',

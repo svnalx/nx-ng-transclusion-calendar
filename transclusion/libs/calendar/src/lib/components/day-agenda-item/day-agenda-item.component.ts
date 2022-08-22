@@ -16,6 +16,7 @@ export class DayAgendaItemComponent implements AfterViewInit {
   };
 
   ngAfterViewInit(): void {
-    console.log('the calendar event is: ', this.calendarEvent);
+    //console.log('the calendar event is: ', this.calendarEvent);
+    return;
   }
 }

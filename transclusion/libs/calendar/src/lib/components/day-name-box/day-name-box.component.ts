@@ -17,6 +17,7 @@ export class DayNameBoxComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('modulus', this.dayNames[(this.dayNumber % 7) - 1]);
+    //console.log('modulus', this.dayNames[(this.dayNumber % 7) - 1]);
+    return;
   }
 }

@@ -32,7 +32,7 @@ export class DayAgendaBoxComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.todaysEvents = this.calendarEventsByDay[this.dayNumber];
-    console.log('todays events', this.todaysEvents);
+    //console.log('todays events', this.todaysEvents);
   }
 
   ngAfterViewInit() {
