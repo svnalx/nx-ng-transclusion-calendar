@@ -1,3 +1,5 @@
 <div class="day-agenda-item">
-  <ng-container *ngTemplateOutlet="customTemplate"></ng-container>
+  <ng-container
+    *ngTemplateOutlet="templateName; context: { $implicit: calendarEvent }"
+  ></ng-container>
 </div>

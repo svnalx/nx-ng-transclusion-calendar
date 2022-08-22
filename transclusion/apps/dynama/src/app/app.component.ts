@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalendarEvent } from '@transclusion/calendar';
 import { DayService } from '@transclusion/shared';
 @Component({
   selector: 'transclusion-root',
@@ -6,13 +7,14 @@ import { DayService } from '@transclusion/shared';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'dynama';
   dayNames: string[];
   dayNumbers: number[];
+  calendarEvents: CalendarEvent[];
 
   constructor(private dayService: DayService) {
-    this.dayNames = this.dayService.getDayNames();
-    this.dayNumbers = this.dayService.getDayNumbers();
+    this.dayNames = this.dayService.dayNames();
+    this.dayNumbers = this.dayService.dayNumbers();
+    this.calendarEvents = this.dayService.calendarEvents();
   }
 
   ngOnInit(): void {

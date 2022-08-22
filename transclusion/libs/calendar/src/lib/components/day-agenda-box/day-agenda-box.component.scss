@@ -2,5 +2,32 @@
 
 :host {
   .day-agenda-box {
+    .event-row {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      p {
+        flex: 1;
+        font: normal normal 100 11px/11px 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: $green_3;
+        &:nth-child(1) {
+          font-weight: 600;
+          color: $gray_7;
+          margin: 0 0 4px 0;
+          padding: 4px;
+          border-radius: 0 0 0 4px;
+        }
+        &:nth-child(2) {
+          text-align: right;
+          color: $gray_7;
+          margin: 0 0 4px 0;
+          padding: 4px;
+          border-radius: 0 0 4px 0;
+        }
+      }
+    }
   }
 }

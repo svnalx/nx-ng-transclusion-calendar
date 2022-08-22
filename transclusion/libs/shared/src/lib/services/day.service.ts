@@ -1,14 +1,11 @@
 import { Injectable } from '@angular/core';
+import { CalendarEvent } from '@transclusion/calendar';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DayService {
-  constructor() {
-    return;
-  }
-
-  getDayNames(): string[] {
+  dayNames(): string[] {
     return [
       'Monday',
       'Tuesday',
@@ -20,7 +17,7 @@ export class DayService {
     ];
   }
 
-  getDayNumbers(): number[] {
+  dayNumbers(): number[] {
     const dayNumbers: number[] = [];
 
     for (let i = 1; i <= 28; i++) {
@@ -28,5 +25,12 @@ export class DayService {
     }
 
     return dayNumbers;
+  }
+
+  calendarEvents(): CalendarEvent[] {
+    return [
+      { eventName: 'start work', timeDue: '9:00 am' },
+      { eventName: 'end work', timeDue: '5:00 pm' },
+    ];
   }
 }

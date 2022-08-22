@@ -1,13 +1,18 @@
 <div class="day-agenda-box">
-  <!-- <ng-container *ngTemplateOutlet="template1; context: { parentVar: 1235 }">
-  </ng-container> -->
-  <day-agenda-item [customTemplate]="template1"></day-agenda-item>
+  <ng-template #template1>
+    <p>No agenda to display.</p>
+  </ng-template>
+
+  <ng-template let-calendarEvent #template2>
+    <div class="event-row">
+      <p>{{ calendarEvent.eventName }}</p>
+      <p>{{ calendarEvent.timeDue }}</p>
+    </div>
+  </ng-template>
+
+  <day-agenda-item
+    *ngFor="let ce of calendarEvents"
+    [templateName]="template"
+    [calendarEvent]="ce"
+  ></day-agenda-item>
 </div>
-
-<ng-template let-localVar="parentVar" #template1>
-  <p>No agenda to display. {{ localVar }}</p>
-</ng-template>
-
-<ng-template let-value="data-2" #template2>
-  <p>Template 2</p>
-</ng-template>
